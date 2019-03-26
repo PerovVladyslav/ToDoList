@@ -1,0 +1,117 @@
+
+* {
+  box-sizing: border-box;
+}
+#root{
+  width: 500px; /* Ширина слоя */
+
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+    background: rgb(255, 255, 255);
+    /*outline: 2px solid #000; /* Чёрная рамка */
+    border: 3px solid rgb(0, 0, 0); /* Белая рамка */
+    border-radius: 10px; /* Радиус скругления */
+    padding:0px 30px 15px 30px; 
+
+}
+
+hr {
+  border: none; /* Убираем границу */
+  background-color: black; /* Цвет линии */
+  color: black; /* Цвет линии для IE6-7 */
+  height: 2px; /* Толщина линии */
+  padding:0px 0px 0px 0px; 
+  margin: -15px 0px 15px 0px;
+
+
+ }
+#new-task{
+  width: 80%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 10px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  margin: 0px 0px 0px 0px;
+  list-style-type: none; /* Убираем маркеры */
+
+
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+  padding: 12px 8px 12px 40px;
+
+}
+
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+#navButton {
+  padding: 12px 8px 12px 10px;
+}
+#navButton button{
+  float: left;
+}
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
