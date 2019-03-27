@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+  $(function() {
+    $('#ul1').sortable();
+    $('#ul1').disableSelection();
+  });
   
   if (localStorage.getItem('todos')) {
     $('#ul1').html(localStorage.getItem('todos'));
@@ -110,6 +115,7 @@ function makeCounter(){
 
 
 }
+
 
 
 });//ready
